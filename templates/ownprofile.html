@@ -1,0 +1,73 @@
+{% load static %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Profile | SteelTalons-WebApp</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    <body>
+    <h1 class="brand"><span>My</span>Profile</h1>
+    <div class="wrapper">
+        <div class="company-info">
+
+        </div>
+        <div class="contact">
+            <h3>View Your Profile</h3>
+            <div class="alert">Your message has been sent</div>
+            <form id="contactForm" action="/update/" method="post"> {% csrf_token %}
+                <p>
+                    <label><i class="fa fa-user"></i> Full Name</label>
+                    <label>
+                        <input name="fullname" value="{{ profile.fullname }}" type="text">
+                    </label>
+                </p>
+                <p>
+                    <label><i class="fa fa-phone"></i> Phone Number</label>
+                    <input type="text" name="company" id="company" required>
+                </p>
+                <p>
+                    <label><i class="fa fa-envelope"></i> Email Address</label>
+                    <input name="email" value="{{ profile.email }}" type="email">
+                </p>
+                <p>
+                    <label><i class="fa fa-map-marker" aria-hidden="true"></i> Sub-Team </label>
+                    <input name="sub-team" value="{{ profile.city }}" type="text">
+                </p>
+                <p>
+                    <label><i class="fa fa-map-marker" aria-hidden="true"></i> Grade</label>
+                    <input name="grade" value="{{ profile.state }}" type="text">
+                </p>
+                <p>
+                    <label> <i class="fa fa-map-marker" aria-hidden="true"></i> Zip-Code</label>
+                    <input type="text" name="phone" id="phone" required>
+                </p>
+
+                <p class="full">
+                    <button type="submit" id="updatebtn" class="page-header__nav-link js-anchor js-link is-active">
+                        Update
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    </body>
+    </html>
+{% endblock content %}

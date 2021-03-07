@@ -1,0 +1,94 @@
+{% load static %}
+
+{% block content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Home | SteelTalons-WebApp</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{ static '/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/prettyphoto.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+    <body data-spy="scroll" data-target=".main-nav">
+
+
+
+    <section id="section-getstarted" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center wow fadeInUp">
+                    <h2 class="heading-title" style="text-align: left;">How do I get started?</h2>
+                    <p style="text-align: left;">
+                        <a href="/signup">Sign Up To Get Started Today!</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{#    <footer id="section-footer">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-md-12 text-center">#}
+{#                    <ul class="socail-link list-inline">#}
+{#                        <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>#}
+{#                        <li><a href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>#}
+{#                        <li><a href="https://github.com"><i class="fa fa-github"></i></a></li>#}
+{#                    </ul>#}
+{#                    <h4>Copyright © 2021, Website by Sai Charan Todupunoori</h4>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </footer>#}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+
+
+    <script>
+        $(".main-nav").sticky();
+    </script>
+
+    <script>
+        new WOW().init();
+
+    </script>
+    </body>
+    </html>
+{% endblock %}
